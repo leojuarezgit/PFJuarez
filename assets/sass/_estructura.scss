@@ -1,0 +1,106 @@
+//mobile first
+#estructura_grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 14vh auto auto auto 40vh 10vh;
+    grid-template-areas:
+        "nav_bar"
+        "carousel"
+        "area_left"
+        "area_right"
+        "subarea"
+        "foot";
+}
+
+
+
+
+
+
+/* utilizo este breakpoint porque coincide con el de bootstrap (para mostrar o no el menu hamburguesa) */
+//CONTACTO
+@media only screen and (min-width: 992px) {
+
+
+    #estructura_grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100px auto auto 40vh auto;
+        grid-template-areas:
+            "nav_bar nav_bar"
+            "carousel carousel"
+            "area_left area_right"
+            "subarea subarea"
+            "foot foot";
+    }
+
+    .subarea {
+        flex-direction: row;
+    }
+
+    .servicio {
+        width: 300px;
+        height: 150px;
+    }
+
+    .planta_der {
+        display: block;
+        width: 40vw;
+        height: 25vw;
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
+
+    .planta {
+        z-index: -1;
+        position: absolute;
+        opacity: 40%;
+        height: 80vh;
+        width: 100vw;
+
+    }
+
+    .area_left {
+        grid-area: area_left;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        row-gap: 2vh;
+        padding-top: 10px;
+
+
+        p {
+            font-size: large;
+            padding-left: 2%;
+            padding-right: 5%;
+            @include animacion (3s);
+        }
+
+        h1 {
+            font-size: $font_size_titular;
+        }
+
+        h2 {
+            font-size: $font_size_texto;
+
+        }
+
+    }
+
+    .row_organigrama {
+
+        column-gap: 30px;
+
+    }
+
+    .card {
+        width: 25vw;
+    }
+
+
+    .area_right {
+        padding-top: 100px;
+    }
+}

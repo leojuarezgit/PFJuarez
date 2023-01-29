@@ -1,0 +1,365 @@
+@-webkit-keyframes movimiento {
+  0% {
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes movimiento {
+  0% {
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+  color: aliceblue;
+}
+
+.carousel_size {
+  width: 1000px;
+  height: 400px;
+}
+
+.logo {
+  grid-area: logo;
+  height: 20vh;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_subiza {
+  width: 300px;
+  height: 150px;
+}
+
+.bg_color_principal {
+  background-color: #0d3b55;
+}
+
+.bg_color_secundario {
+  background: linear-gradient(to bottom right, rgb(213, 213, 218) 50%, rgba(37, 37, 113, 0.354));
+}
+
+.bg_color_card {
+  background-color: rgb(85, 191, 191);
+}
+
+.font_principal {
+  color: aliceblue;
+}
+
+.color_font_card {
+  color: black;
+}
+
+.carousel {
+  grid-area: carousel;
+}
+
+.carousel-inner img {
+  width: 100%;
+  max-height: 65vh;
+}
+
+.nav_bar {
+  grid-area: nav_bar;
+}
+
+.area_left {
+  grid-area: area_left;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  row-gap: 2vh;
+  padding-top: 10px;
+}
+.area_left p {
+  font-size: large;
+  padding-left: 2%;
+  padding-right: 5%;
+  position: relative;
+  -webkit-animation: movimiento 3s;
+          animation: movimiento 3s;
+}
+.area_left h1 {
+  padding-top: 50px;
+  font-size: 150%;
+  padding-left: 2%;
+  position: relative;
+  -webkit-animation: movimiento 5s;
+          animation: movimiento 5s;
+}
+.area_left h2 {
+  font-size: small;
+  padding-left: 2%;
+  padding-right: 5%;
+}
+
+.area_right {
+  grid-area: area_right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5vh;
+  height: 50vh;
+  padding-top: 10px;
+}
+.area_right h2 {
+  position: relative;
+  -webkit-animation: movimiento 3s;
+          animation: movimiento 3s;
+}
+.area_right .servicio_izq {
+  width: 50vw;
+  height: 10vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+}
+
+.subarea {
+  grid-area: subarea;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.servicio {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 250px;
+  height: 40%;
+  border-radius: 50px 50px;
+  box-shadow: 5px 5px 5px 2px rgba(123, 19, 36, 0.644);
+  color: black;
+}
+
+.subtitulo {
+  text-align: center;
+}
+
+.foot {
+  grid-area: foot;
+  height: 20vh;
+  background-color: black;
+  color: aliceblue;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50vw;
+  height: 10vh;
+  background-color: rgb(85, 191, 191);
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5%;
+}
+
+.redes_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
+.icono_redes {
+  width: 30px;
+  height: 30px;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 50vh;
+}
+
+.foot {
+  grid-area: foot;
+  padding-left: 20px;
+  font-size: small;
+  display: flex;
+  align-items: center;
+}
+
+.foto {
+  width: 100px;
+  height: 100px;
+}
+
+.foto_nombre {
+  font-size: small;
+}
+
+.foto_titulo {
+  font-size: x-small;
+}
+
+.foto_puesto {
+  font-size: x-small;
+}
+
+.elemento_organigrama {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  text-align: center;
+}
+
+.row_organigrama {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+
+.contenedor_organigrama {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  row-gap: 5vh;
+  padding-top: 150px;
+}
+
+hr {
+  height: 2px;
+  margin-left: 0%;
+  margin-right: 50%;
+  background-color: red;
+}
+
+.planta {
+  z-index: -1;
+  position: absolute;
+  opacity: 40%;
+  height: 100px;
+  width: 300px;
+  padding-bottom: 100px;
+}
+
+.planta_der {
+  display: none;
+  z-index: -1;
+  position: absolute;
+  opacity: 30%;
+  height: auto;
+  width: 50vw;
+  padding-right: 100px;
+}
+
+iframe {
+  width: 50vw;
+  height: 35vw;
+  max-height: 300px;
+}
+
+.card_controller {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+#estructura_grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 14vh auto auto auto 40vh 10vh;
+  grid-template-areas: "nav_bar" "carousel" "area_left" "area_right" "subarea" "foot";
+}
+
+/* utilizo este breakpoint porque coincide con el de bootstrap (para mostrar o no el menu hamburguesa) */
+@media only screen and (min-width: 992px) {
+  #estructura_grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px auto auto 40vh auto;
+    grid-template-areas: "nav_bar nav_bar" "carousel carousel" "area_left area_right" "subarea subarea" "foot foot";
+  }
+  .subarea {
+    flex-direction: row;
+  }
+  .servicio {
+    width: 300px;
+    height: 150px;
+  }
+  .planta_der {
+    display: block;
+    width: 40vw;
+    height: 25vw;
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+  .planta {
+    z-index: -1;
+    position: absolute;
+    opacity: 40%;
+    height: 80vh;
+    width: 100vw;
+  }
+  .area_left {
+    grid-area: area_left;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    row-gap: 2vh;
+    padding-top: 10px;
+  }
+  .area_left p {
+    font-size: large;
+    padding-left: 2%;
+    padding-right: 5%;
+    position: relative;
+    -webkit-animation: movimiento 3s;
+            animation: movimiento 3s;
+  }
+  .area_left h1 {
+    font-size: 200%;
+  }
+  .area_left h2 {
+    font-size: medium;
+  }
+  .row_organigrama {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .card {
+    width: 25vw;
+  }
+  .area_right {
+    padding-top: 100px;
+  }
+}/*# sourceMappingURL=main.css.map */

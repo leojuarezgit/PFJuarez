@@ -1,0 +1,30 @@
+//mapeado de colores
+$color: (
+  principal: #0d3b55,
+  fuente: aliceblue,
+  secundario: rgb(85, 191, 191)
+);
+
+
+//fuente
+$family_font: 'Asap', sans-serif;
+$font_size_titular: 200%;
+$font_size_mobile: 150%;
+$font_size_texto: medium;
+$font_size_texto_mobile: small;
+
+//mixin animacion
+@mixin animacion ($velocidad) {
+  position: relative;
+  animation: movimiento $velocidad;
+}
+
+@keyframes movimiento {
+  0% {
+    left: 100px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
